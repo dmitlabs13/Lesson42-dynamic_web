@@ -85,6 +85,15 @@ server {
 sadmin@alp42-front:~$ curl http://127.0.0.1:8080/test.php
 HELLO PHPsadmin@alp42-front:~$ 
 
+```
+
+### ставим wordpress на back
+```
+sudo apt install mysql-server
+# создаем базу
+mysql> CREATE DATABASE wordpress CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+Query OK, 1 row affected (0.01 sec)
+
 
 
 
