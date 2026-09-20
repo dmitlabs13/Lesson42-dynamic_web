@@ -64,6 +64,29 @@ sudo systemctl restart php8.3-fpm\
 sadmin@alp42-back:~$ sudo ss -lntp | grep 9000
 LISTEN 0      4096   192.168.50.208:9000      0.0.0.0:*    users:(("php-fpm8.3",pid=13195,fd=10),("php-fpm8.3",pid=13194,fd=10),("php-fpm8.3",pid=13193,fd=8))
 
+# создаем тестовый php на alp42-back
+sadmin@alp42-back:~$ sudo nano /var/www/html/test.php
+# с таким содержимым
+<?php echo "HELLO PHP";
+
+#Теперь на front создаем конфиг
+sadmin@alp42-front:~$ sudo nano /etc/nginx/sites-available/test
+server {
+    listen 8080;
+
+    location ~ \.php$ {
+        include /etc/nginx/fastcgi_params;
+        fastcgi_pass 192.168.50.208:9000;
+        fastcgi_param SCRIPT_FILENAME /var/www/html$fastcgi_script_name;
+    }
+}
+
+#проверяем
+sadmin@alp42-front:~$ curl http://127.0.0.1:8080/test.php
+HELLO PHPsadmin@alp42-front:~$ 
+
+
+
 
 
 
