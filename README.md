@@ -189,7 +189,55 @@ server {
 <img width="942" height="792" alt="image" src="https://github.com/user-attachments/assets/90014ca2-6b9c-4a0a-b970-1d1de91f67ea" />
 
 
-пароль аккаунта админ Y4GGJPdNchK^zYm$c0
+пароль аккаунта админ Y4GGJPdNchK^zYm$c0\
+
+Следующее django
+```
+
+sudo apt install python3 python3-venv python3-pip
+sadmin@alp42-back:/var/www$ cd /var/www
+sadmin@alp42-back:/var/www$ sudo mkdir django
+sadmin@alp42-back:/var/www$ sudo python3 -m venv /var/www/django/venv
+sadmin@alp42-back:/var/www$ ls -la ./django/
+total 12
+drwxr-xr-x 3 root root 4096 Sep 22 17:09 .
+drwxr-xr-x 5 root root 4096 Sep 22 17:09 ..
+drwxr-xr-x 5 root root 4096 Sep 22 17:09 venv
+sadmin@alp42-back:/var/www$ ls -la ./django/venv
+total 24
+drwxr-xr-x 5 root root 4096 Sep 22 17:09 .
+drwxr-xr-x 3 root root 4096 Sep 22 17:09 ..
+drwxr-xr-x 2 root root 4096 Sep 22 17:09 bin
+drwxr-xr-x 3 root root 4096 Sep 22 17:09 include
+drwxr-xr-x 3 root root 4096 Sep 22 17:09 lib
+lrwxrwxrwx 1 root root    3 Sep 22 17:09 lib64 -> lib
+-rw-r--r-- 1 root root  159 Sep 22 17:09 pyvenv.cfg
+sadmin@alp42-back:/var/www$
+source /var/www/django/venv/bin/activate
+(venv) sadmin@alp42-back:/var/www$ pip install django gunicorn
+Collecting django
+  Downloading django-6.1.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting gunicorn
+  Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Downloading asgiref-3.12.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Downloading sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+Downloading django-6.1.1-py3-none-any.whl (8.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 8.0 MB/s eta 0:00:00
+Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.4/228.4 kB 6.7 MB/s eta 0:00:00
+Downloading asgiref-3.12.1-py3-none-any.whl (25 kB)
+Downloading sqlparse-0.6.0-py3-none-any.whl (50 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 3.5 MB/s eta 0:00:00
+Installing collected packages: sqlparse, gunicorn, asgiref, django
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/var/www/django/venv/lib/python3.12/site-packages/sqlparse'
+Check the permissions.
+
+(venv) sadmin@alp42-back:/var/www$ 
+```
+
+
 
 
 
