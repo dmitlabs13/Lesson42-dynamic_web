@@ -214,27 +214,9 @@ lrwxrwxrwx 1 root root    3 Sep 22 17:09 lib64 -> lib
 -rw-r--r-- 1 root root  159 Sep 22 17:09 pyvenv.cfg
 sadmin@alp42-back:/var/www$
 source /var/www/django/venv/bin/activate
-(venv) sadmin@alp42-back:/var/www$ pip install django gunicorn
-Collecting django
-  Downloading django-6.1.1-py3-none-any.whl.metadata (3.9 kB)
-Collecting gunicorn
-  Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
-Collecting asgiref>=3.9.1 (from django)
-  Downloading asgiref-3.12.1-py3-none-any.whl.metadata (9.4 kB)
-Collecting sqlparse>=0.5.0 (from django)
-  Downloading sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
-Downloading django-6.1.1-py3-none-any.whl (8.4 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 8.0 MB/s eta 0:00:00
-Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.4/228.4 kB 6.7 MB/s eta 0:00:00
-Downloading asgiref-3.12.1-py3-none-any.whl (25 kB)
-Downloading sqlparse-0.6.0-py3-none-any.whl (50 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 3.5 MB/s eta 0:00:00
-Installing collected packages: sqlparse, gunicorn, asgiref, django
-ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/var/www/django/venv/lib/python3.12/site-packages/sqlparse'
-Check the permissions.
+(venv) sadmin@alp42-back:/var/www$
 
-(venv) sadmin@alp42-back:/var/www$ 
+
 ```
 
 
