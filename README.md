@@ -189,6 +189,10 @@ server {
 <img width="942" height="792" alt="image" src="https://github.com/user-attachments/assets/90014ca2-6b9c-4a0a-b970-1d1de91f67ea" />
 
 
+пароль аккаунта админ Y4GGJPdNchK^zYm$c0
+
+
+
 
 
 
