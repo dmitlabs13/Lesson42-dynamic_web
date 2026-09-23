@@ -215,6 +215,23 @@ lrwxrwxrwx 1 root root    3 Sep 22 17:09 lib64 -> lib
 sadmin@alp42-back:/var/www$
 source /var/www/django/venv/bin/activate
 (venv) sadmin@alp42-back:/var/www$
+#устанавливаем django
+(venv) sadmin@alp42-back:~$ pip install django gunicorn
+Collecting django
+  Using cached django-6.1.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting gunicorn
+  Using cached gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Using cached asgiref-3.12.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Using cached sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+Using cached django-6.1.1-py3-none-any.whl (8.4 MB)
+Using cached gunicorn-26.2.0-py3-none-any.whl (228 kB)
+Using cached asgiref-3.12.1-py3-none-any.whl (25 kB)
+Using cached sqlparse-0.6.0-py3-none-any.whl (50 kB)
+Installing collected packages: sqlparse, gunicorn, asgiref, django
+Successfully installed asgiref-3.12.1 django-6.1.1 gunicorn-26.2.0 sqlparse-0.6.0
+(venv) sadmin@alp42-back:~$ 
 
 
 ```
