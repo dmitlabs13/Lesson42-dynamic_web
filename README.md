@@ -236,6 +236,41 @@ Successfully installed asgiref-3.12.1 django-6.1.1 gunicorn-26.2.0 sqlparse-0.6.
 
 ```
 
+создаем проект django
+```
+(venv) sadmin@alp42-back:/var/www$ cd /var/www/django
+(venv) sadmin@alp42-back:/var/www/django$ django-admin startproject mysite .
+(venv) sadmin@alp42-back:/var/www/django$ ls
+manage.py  mysite  venv
+(venv) sadmin@alp42-back:/var/www/django$
+
+(venv) sadmin@alp42-back:/var/www/django$ gunicorn --bind 0.0.0.0:8000 mysite.wsgi:application
+[2026-09-23 16:27:21 +0000] [21803] [INFO] Starting gunicorn 26.2.0
+[2026-09-23 16:27:21 +0000] [21803] [INFO] Listening at: http://0.0.0.0:8000 (21803)
+[2026-09-23 16:27:21 +0000] [21803] [INFO] Using worker: sync
+[2026-09-23 16:27:21 +0000] [21804] [INFO] Booting worker with pid: 21804
+[2026-09-23 16:27:21 +0000] [21803] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+
+```
+Настроим nginx на проксирование 8081 на 192.168.50.208:8000
+```
+sudo nano /etc/nginx/sites-available/django
+server {
+    listen 8081;
+
+    location / {
+        proxy_pass http://192.168.50.208:8000;
+    }
+}
+```
+<img width="1161" height="664" alt="image" src="https://github.com/user-attachments/assets/aab1dd6c-5004-4216-8b0c-3ade99bb63e0" />
+
+
+
+
+
+
+
 
 
 
